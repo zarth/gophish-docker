@@ -11,7 +11,7 @@ Copy the "admin" and "phish" certificates to /srv/gophish/ (by default) and __up
 >chmod 0600 /srv/gophish/admin.* /srv/gophish/phish.*
 
 __Start the container:__
->docker-compose -d up
+>docker-compose up -d
 
 Alternatively run the container directly (by default using HTTP and persisting the database to a unnamed volume):
 >docker run -d --name gophish -p 3333:3333 -p 80:80 --restart=always scottg88/gophish
@@ -25,6 +25,16 @@ Upgrading without Docker Compose and default _docker run_ settings from above:
 >docker rm _gophish-old_
 
 Italics indicate the container names, ensure they match names used in your environment.
+
+Upgrading with Docker Compose, perform the following from the folder holding docker-compose.yml:
+
+>docker-compose stop
+
+>docker-compose down
+
+>docker-compose pull
+
+>docker-compose up -d
 
 ##Persisting Data
 ###Database
