@@ -31,7 +31,7 @@ Alternatively run the container directly (by default using HTTP and persisting t
 docker run -d --name gophish -p 3333:3333 -p 80:80 --restart=always scottg88/gophish
 ```
 
-##Upgrading
+## Upgrading
 Upgrading without Docker Compose and default _docker run_ settings from above:
 
 ```
@@ -51,8 +51,8 @@ docker-compose down
 docker-compose pull
 docker-compose up -d
 ```
-##Persisting Data
-###Database
+## Persisting Data
+### Database
 The configuration file (config.json) is modified to place the database file (gophish.db) in a sub-directory. This allows a volume to be defined to persist the gophish database file.
 
 __Config snippet:__
@@ -62,7 +62,7 @@ __Config snippet:__
 
 A volume is defined in the Dockerfile persisting the database by default. Alternatively mount a volume against "_/app/database_" with _docker run_.
 
-##HTTPS
+## HTTPS
 To use HTTPS with this container, overwrite the config file with a volume mount at _docker run_.
 
 __Config file:__ /app/config.json
