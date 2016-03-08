@@ -1,6 +1,13 @@
 # GoPhish Docker Container
+This Docker container runs the "gophish" phishing toolkit.
+See the gophish project site at https://getgophish.com/ or the GitHub project at https://github.com/gophish/gophish
+
+Description from the [GitHub page](https://github.com/gophish/gophish):
+
+Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
+
 ## Running
-The suggested way of running the container is to use Docker Compose. The docker-compose.yml uses a config.json file to enable HTTPS.
+The suggested way of running the container is to use Docker Compose. The docker-compose.yml uses a customised config.json file to enable HTTPS and mounts filesystem files into the container for the config, certificates and the database.
 
 __Download the docker-compose.yml and config.json files into /srv/gophish:__
 ```
@@ -19,7 +26,7 @@ __Start the container:__
 docker-compose up -d
 ```
 
-Alternatively run the container directly (by default using HTTP and persisting the database to a unnamed volume):
+Alternatively run the container directly (by default using HTTP and persisting the database to an unnamed volume, see the section on HTTPS for utilising HTTPS):
 ```
 docker run -d --name gophish -p 3333:3333 -p 80:80 --restart=always scottg88/gophish
 ```
