@@ -10,7 +10,9 @@ Gophish is an open-source phishing toolkit designed for businesses and penetrati
 The tags associated with this container are:
 
 __latest___: the latest _release_ version
+
 __release-x.x.x__: a specific release version
+
 __dev__: a build of the latest source commit as at build time
 
 ## Running
