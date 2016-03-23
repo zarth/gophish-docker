@@ -6,6 +6,13 @@ Description from the [GitHub page](https://github.com/gophish/gophish):
 
 Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
 
+## Tags
+The tags associated with this container are:
+
+__latest___: the latest _release_ version
+__release-x.x.x__: a specific release version
+__dev__: a build of the latest source commit as at build time
+
 ## Running
 The suggested way of running the container is to use Docker Compose. The docker-compose.yml uses a customised config.json file to enable HTTPS and mounts filesystem files into the container for the config, certificates and the database.
 
