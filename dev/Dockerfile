@@ -14,3 +14,4 @@ RUN chmod +x ./gophish
 VOLUME ["/app/database"]
 EXPOSE 3333 80
 ENTRYPOINT ["./gophish"]
+
